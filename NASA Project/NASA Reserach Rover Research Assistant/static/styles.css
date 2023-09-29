@@ -1,0 +1,199 @@
+/* Reset some default styles */
+/*Apply Basic Reset Styles to remove default margins and paddings */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+/*Apply Basic Styling to the entire body of the page */
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #f0f0f0;*/
+}
+/* Chat container styles */
+/* Style the Chat container to center it and its height */
+.chat-container {
+   /* overflow: hidden;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+/* Style Chat Messages */
+/* Apply styling to chat messages, including user and bot messages */
+.chat-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/* Style user messages */
+.chat-message.user {
+    background-color: #e0e0e0;
+    text-align: right;
+}
+/* Style bot messages */
+.chat-message.bot {
+    background-color: #f2f2f2;
+    text-align: left;
+    font-style: italic; /* You can style bot messages differently, e.g., italic */
+}
+/* Chat frame styles */
+/* Style the chat frame, which contains the chat interface */
+.chat-frame {
+    background-color: rgba(63, 105, 244, 0.5);
+    border: 2px solid #1651c0;
+    border-radius: 10px;
+    width: 650px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Place the chat frame above the background image */
+}
+/*.chat-frame {
+    background-image: url("{{ url_for('static', filename='Bgpic.jpg') }}"); /* Specify the path to your background image */
+    /*background-repeat: no-repeat;
+    background-size: cover; /* This ensures the background image covers the entire frame */
+    /*background-position: center; /* Center the background image */
+    /*background-color: rgba(255, 255, 255, 0.9);*/
+    /*border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Place the chat frame above the background image 
+}*/
+/* Background video styles */
+/*#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#background-video-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* Chat styles */
+/* Style the chat area, including the chat header and body */
+.chat {
+    padding: 20px;
+    height: calc(100% - 100px);
+    overflow-y: auto;
+}
+/* Style the chat header */
+.chat-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: white;
+}
+/* Style chat messages in the chat body */
+.chat-body {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+/* Style user messages in the chat body */
+.chat-body.user {
+    background-color: rgba(116, 84, 191, 0.3);
+    text-align: right;
+    color: white;
+}
+/* Style bot messages in the chat body */
+.chat-body.bot {
+    background-color:rgba(116, 84, 191, 0.3);;
+    text-align: left;
+    color: white;
+}
+/* Remove display: none; for button-options */
+/* Style the button options section, which displays user interaction buttons */
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(116, 84, 191, 0.3);
+    padding: 4px;
+    border-top: 2px solid rgba(116,84,191,0.3);
+    margin-top: 4px;
+}
+/* Style text input for user's topic */
+input[type="text"] {
+    flex-grow: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Place the background image behind the chat content */
+    /*opacity: 0.5;  /*Adjust the opacity of the background image if needed */
+}
+.typing-indicator {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; /* Adjust the spacing between the message and indicator */
+    color: #000305; /* Color of the typing indicator */
+    animation: bounce 0.5s infinite alternate; /* Add the bounce animation */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px); /* Adjust the bounce height */
+    }
+}
+.typing-dots {
+    animation: typing 1.5s steps(3, end) infinite;
+}
+@keyframes typing {
+    0%, 100% {
+        width: 0;
+    }
+    50% {
+        width: 8px; /* Adjust the width of the dots */
+    }
+}
+/* Style buttons */
+button {
+    background-color: rgb(170, 223, 239);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+/* Style buttons on hover */
+button:hover {
+    background-color: rgb(123, 251, 236);
+}
+/* Style the list of buttons */
+.button-list {
+    list-style-type: none;
+    padding: 0;
+}
+/* Style individual list items (buttons) */
+.button-list li {
+    margin-bottom: 10px; /* Adjust the spacing between buttons as needed */
+}
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire viewport */
+    z-index: -1; /* Place the video behind other content */
+}

@@ -7,7 +7,7 @@ matplotlib.use('Agg')
 import numpy as np
 app = Flask(__name__)
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "" #Enter the API Key from OpenAI API portal
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
